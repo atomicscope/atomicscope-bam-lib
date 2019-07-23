@@ -18,9 +18,9 @@ namespace Kovai.AtomicScope.BamSample
 		{
 			var businessTransaction = "Booking Request";
 
-			//Receive
+			#region Stage 1 Receive
 
-			var receiveResponse = _activityService.StartActivity(new StartActivityRequest
+			var receiveResponse =  _activityService.StartActivity(new StartActivityRequest
 			{
 				BusinessProcess = _businessProcess,
 				BusinessTransaction = businessTransaction,
@@ -29,7 +29,7 @@ namespace Kovai.AtomicScope.BamSample
 				IsArchiveEnabled = true,
 				MessageBody = "{\"tim\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -42,10 +42,12 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
 
-			//Process
+			#endregion
+
+			#region Stage 2 Process
 
 			var processResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -56,7 +58,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = "Receive",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -69,10 +71,12 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
 
-			//Send
+			#endregion
+			
+			#region Stage 3 Send
 
 			var sendResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -83,7 +87,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = "Process",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -96,14 +100,16 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
+
+			#endregion
 		}
 		public void ConfirmBooking()
 		{
 			var businessTransaction = "Confirm Booking";
 
-			//Receive
+			#region Receive
 
 			var receiveResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -113,7 +119,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = ".",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -126,10 +132,12 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
 
-			//Process
+			#endregion
+
+			#region Process
 
 			var processResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -140,7 +148,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = "Receive",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -153,10 +161,12 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
 
-			//Send
+			#endregion
+
+			#region Send
 
 			var sendResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -167,7 +177,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = "Process",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -180,15 +190,17 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
+
+			#endregion
 		}
 
 		public void SendShippingInstructions()
 		{
 			var businessTransaction = "Send Shipping Instructions";
 
-			//Receive
+			#region Receive
 
 			var receiveResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -198,7 +210,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = ".",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -211,8 +223,12 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
+
+			#endregion
+
+			//To Archive at any point
 
 			_activityService.ArchiveActivity(new ArchiveActivityRequest()
 			{
@@ -222,10 +238,10 @@ namespace Kovai.AtomicScope.BamSample
 				StageActivityId = receiveResponse.StageActivityId,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
 
-			//Process
+			#region Process
 
 			var processResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -236,7 +252,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = "Receive",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -249,10 +265,12 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
 
-			//Send
+			#endregion
+
+			#region Send
 
 			var sendResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -263,7 +281,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = "Process",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -276,15 +294,17 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
+
+			#endregion
 		}
 
 		public void ReceiveInvoice()
 		{
 			var businessTransaction = "Receive Invoice";
 
-			//Receive
+			#region Receive
 
 			var receiveResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -294,7 +314,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = ".",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -307,10 +327,12 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
 
-			//Process
+			#endregion
+
+			#region Process
 
 			var processResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -321,7 +343,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = "Receive",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -334,10 +356,12 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
 
-			//Send
+			#endregion
+
+			#region Send
 
 			var sendResponse = _activityService.StartActivity(new StartActivityRequest
 			{
@@ -348,7 +372,7 @@ namespace Kovai.AtomicScope.BamSample
 				PreviousStage = "Process",
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			}).Result;
 
 			_activityService.UpdateActivity(new UpdateActivityRequest()
@@ -361,8 +385,12 @@ namespace Kovai.AtomicScope.BamSample
 				Status = StageStatus.Success,
 				MessageBody = "{\"some\":1}",
 				MessageHeader = "{\"some\":1}",
-				ResourceId = "94a5d90d-4ff6-4919-8392-cd3b77d9727e"
+				ResourceId = "0303ac15-71b0-4966-a573-cca55e2cfbfc"
 			});
+
+			#endregion
+
+			//To log an Exception
 
 			_activityService.LogExceptionActivity(new LogExceptionActivityRequest
 			{

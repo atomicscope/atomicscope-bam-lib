@@ -6,12 +6,12 @@ namespace Kovai.AtomicScope.BamSample
 	{
 		static void Main(string[] args)
 		{
-			var activityService = new ActivityService("https://asfnappbiz370.azurewebsites.net");
+			var activityService = new ActivityService("https://asfnappbt36935.azurewebsites.net");
 			var processor = new LogisticsProcessor(activityService);
-			processor.SendBookingRequest();
-			processor.ConfirmBooking();
-			processor.SendShippingInstructions();
-			processor.ReceiveInvoice();
+			processor.SendBookingRequest(); //Transaction 1
+			processor.ConfirmBooking(); //Transaction 2
+			processor.SendShippingInstructions(); //Transaction 3
+			processor.ReceiveInvoice(); //Transaction 4
 		}
 	}
 }
