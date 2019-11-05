@@ -1,0 +1,231 @@
+[
+ {
+  "businessProcessId": "862ddd93-2aa8-4930-823a-8b56890cce61",
+  "processName": "Ship Any Where Logistics",
+  "businessTransactions": [
+   {
+    "businessTransactionId": "344a6ae8-39e2-4fcb-95b0-9dec8c65f6be",
+    "transactionName": "Booking Request",
+    "isFirstTransaction": true,
+    "direction": 1,
+    "isDeleted": false,
+    "stages": [
+     {
+      "stageId": "33f887c6-b262-4b7f-aef0-da9cee5c9b74",
+      "stageName": "Send",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "344a6ae8-39e2-4fcb-95b0-9dec8c65f6be",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     },
+     {
+      "stageId": "4c19386d-99ef-47a1-8d76-e9c60b2ec9c2",
+      "stageName": "Receive",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "344a6ae8-39e2-4fcb-95b0-9dec8c65f6be",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     },
+     {
+      "stageId": "2354872b-6762-4836-9f95-6a80eb2dc2ea",
+      "stageName": "Process",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "344a6ae8-39e2-4fcb-95b0-9dec8c65f6be",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     }
+    ],
+    "messageTypeMaps": [],
+    "isNew": false,
+    "businessProcessId": "862ddd93-2aa8-4930-823a-8b56890cce61",
+    "defaultReprocessStageName": ""
+   },
+   {
+    "businessTransactionId": "dff8905c-0619-4821-b220-be2bd9090db7",
+    "transactionName": "Confirm Booking",
+    "isFirstTransaction": false,
+    "direction": 1,
+    "isDeleted": false,
+    "stages": [
+     {
+      "stageId": "8ef9d57c-d10b-4cba-857a-7212cee0f951",
+      "stageName": "Send",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "dff8905c-0619-4821-b220-be2bd9090db7",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     },
+     {
+      "stageId": "93c92cc5-cac6-49fc-bb07-3222fce8d80f",
+      "stageName": "Process",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "dff8905c-0619-4821-b220-be2bd9090db7",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     },
+     {
+      "stageId": "bb439120-54ce-4ce8-955a-8d4bc748e1f1",
+      "stageName": "Receive",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "dff8905c-0619-4821-b220-be2bd9090db7",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     }
+    ],
+    "messageTypeMaps": [],
+    "isNew": false,
+    "businessProcessId": "862ddd93-2aa8-4930-823a-8b56890cce61",
+    "defaultReprocessStageName": null
+   },
+   {
+    "businessTransactionId": "2c844124-0ea3-4576-9fe0-4af32b1c71dc",
+    "transactionName": "Send Shipping Instructions",
+    "isFirstTransaction": false,
+    "direction": 1,
+    "isDeleted": false,
+    "stages": [
+     {
+      "stageId": "d706ebd3-d7ce-4dfe-9e6d-d8b3ca4356af",
+      "stageName": "Receive",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "2c844124-0ea3-4576-9fe0-4af32b1c71dc",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     },
+     {
+      "stageId": "52c98e61-ed8c-4629-83c6-f5eef46d7f0a",
+      "stageName": "Send",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "2c844124-0ea3-4576-9fe0-4af32b1c71dc",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     },
+     {
+      "stageId": "c48842a7-62dc-4660-a185-60eacd5a0136",
+      "stageName": "Process",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "2c844124-0ea3-4576-9fe0-4af32b1c71dc",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     }
+    ],
+    "messageTypeMaps": [],
+    "isNew": false,
+    "businessProcessId": "862ddd93-2aa8-4930-823a-8b56890cce61",
+    "defaultReprocessStageName": null
+   },
+   {
+    "businessTransactionId": "7a5857dd-2626-422f-8103-e03eb4b17be3",
+    "transactionName": "Receive Invoice",
+    "isFirstTransaction": false,
+    "direction": 1,
+    "isDeleted": false,
+    "stages": [
+     {
+      "stageId": "81a203b1-5af2-4953-b31b-55185eb2d78e",
+      "stageName": "Receive",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "7a5857dd-2626-422f-8103-e03eb4b17be3",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     },
+     {
+      "stageId": "192338c4-5b83-4338-a95d-8396a9f53b3b",
+      "stageName": "Send",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "7a5857dd-2626-422f-8103-e03eb4b17be3",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     },
+     {
+      "stageId": "ccbe2a6c-7935-4548-b755-2de0fc65840f",
+      "stageName": "Process",
+      "isDeleted": false,
+      "stageExecutionId": 5,
+      "stageExecutionName": "AzureFuntion",
+      "isFirstStage": false,
+      "properties": [],
+      "isNew": false,
+      "businessTransactionId": "7a5857dd-2626-422f-8103-e03eb4b17be3",
+      "isDebatchingStage": false,
+      "isArchivingDisabled": false,
+      "reprocessConfiguration": null
+     }
+    ],
+    "messageTypeMaps": [],
+    "isNew": false,
+    "businessProcessId": "862ddd93-2aa8-4930-823a-8b56890cce61",
+    "defaultReprocessStageName": null
+   }
+  ],
+  "workspaceId": "71a8bf10-92cf-49c8-a102-2d48e884819e",
+  "alert": null,
+  "isTrackingDisabled": false
+ }
+]
