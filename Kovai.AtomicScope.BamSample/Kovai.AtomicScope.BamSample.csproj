@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Kovai.AtomicScope.Bam\Kovai.AtomicScope.Bam.csproj" />
+    <PackageReference Include="Kovai.AtomicScope.Bam" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
