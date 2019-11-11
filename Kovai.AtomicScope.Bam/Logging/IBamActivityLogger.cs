@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Kovai.AtomicScope.Bam.Logging
+﻿namespace Kovai.AtomicScope.Bam.Logging
 {
 	public interface IBamActivityLogger
 	{

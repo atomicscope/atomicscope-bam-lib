@@ -7,6 +7,8 @@
 
   <ItemGroup>
     <PackageReference Include="Kovai.AtomicScope.Bam" Version="1.0.0" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
   </ItemGroup>
 
 </Project>
